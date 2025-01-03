@@ -1,0 +1,134 @@
+/*body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+.digital-clock {
+    text-align: center;
+    background-color: #000;
+    color: greenyellow;
+    display: flex;
+    border-radius: 2rem;
+    user-select: none;
+    padding: 0 2rem;
+    border: 0.5rem solid #2d2d2d;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: 'vemanem', sans-serif;
+    margin-right: 2rem;
+}
+
+.week .active {
+    color: white; 
+}
+
+.time {
+    font-family: 'DS-Digital', sans-serif;
+}
+
+.hour,
+.min,
+.sec,
+.dot {
+    display: inline-block;
+    font-size: 13rem;
+}
+
+.blink {
+    animation: blink-animation 1s steps(1, start) infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}*/
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+}
+
+.digital-clock {
+    text-align: center;
+    background-color: #000;
+    color: greenyellow;
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para mejor visualización en móviles */
+    border-radius: 2rem;
+    user-select: none;
+    padding: 2rem; /* Aumentado el padding para mejor espacio en móviles */
+    border: 0.5rem solid #2d2d2d;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #2d2d2d;
+    font-weight: bold;
+    font-family: 'vemanem', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.week .active {
+    color: white; 
+}
+
+.time {
+    font-family: 'DS-Digital', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.hour,
+.min,
+.sec,
+.dot {
+    display: inline-block;
+    font-size: 10rem;
+    margin: 0 0.5rem;
+}
+
+.blink {
+    animation: blink-animation 1s steps(1, start) infinite;
+}
+
+@keyframes blink-animation {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .hour,
+    .min,
+    .sec {
+        font-size: 8rem;
+    }
+}
